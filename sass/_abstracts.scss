@@ -1,0 +1,67 @@
+// Bihher then h1
+.heading-gigant {
+  font-weight: 400;
+  font-size: 7rem;
+  line-height: 1;
+}
+// h1
+.heading-primary {
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+// h2
+.heading-2 {
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+// h3
+.heading-3 {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+// h4
+.heading-4 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-family: $font-secondary;
+  color: $color-yellow;
+  text-transform: uppercase;
+  letter-spacing: .53rem;
+}
+
+// Button
+.button-primary {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: $color-yellow;
+  background-color: transparent;
+  border: 2px solid $color-yellow;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+
+  &--1 {
+    border: none;
+    color: #fff;
+    background-color: $color-yellow;
+  }
+}
+
+// Backgroun image
+.bg-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 60%;
+  width: 60%;
+  z-index: -1;
+  overflow: hidden;
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

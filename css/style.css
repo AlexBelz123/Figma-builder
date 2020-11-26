@@ -1,0 +1,277 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Playfair Display", serif;
+  line-height: 1.6;
+  color: #fff; }
+
+::selection {
+  color: #fff;
+  background: #FF9900; }
+
+.container {
+  width: 100%;
+  position: relative; }
+
+.heading-gigant {
+  font-weight: 400;
+  font-size: 7rem;
+  line-height: 1; }
+
+.heading-primary {
+  font-weight: 400;
+  font-size: 4rem; }
+
+.heading-2 {
+  font-weight: 400;
+  font-size: 4rem; }
+
+.heading-3 {
+  font-weight: 400;
+  font-size: 3rem; }
+
+.heading-4 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-family: "Aleo", serif;
+  color: #FF9900;
+  text-transform: uppercase;
+  letter-spacing: .53rem; }
+
+.button-primary {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #FF9900;
+  background-color: transparent;
+  border: 2px solid #FF9900;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem; }
+  .button-primary--1 {
+    border: none;
+    color: #fff;
+    background-color: #FF9900; }
+
+.bg-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 60%;
+  width: 60%;
+  z-index: -1;
+  overflow: hidden; }
+  .bg-image__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.about-us {
+  width: 100%;
+  height: 73.8rem;
+  display: flex;
+  font-size: 1.6rem; }
+  .about-us__image {
+    width: 40%;
+    height: 100%;
+    background-image: url("../../img/charles.jpg");
+    background-size: cover;
+    position: relative; }
+  .about-us__experience {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 22rem;
+    height: 23rem;
+    background-color: #FF9900;
+    padding: 3.4rem; }
+  .about-us__info {
+    flex: 1;
+    height: 100%;
+    padding: 18.8rem;
+    position: relative; }
+
+.information {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  color: #000; }
+  .information *:not(:last-child) {
+    margin-bottom: 2rem; }
+  .information__paragraph {
+    font-family: "Aleo", serif;
+    font-size: 1.6rem; }
+
+.landing {
+  width: 100%;
+  height: 100.14rem;
+  font-size: 1.6rem;
+  background-image: url("../img/electric-man.png");
+  background-size: cover;
+  position: relative; }
+
+.navbar {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 11rem;
+  background-color: rgba(0, 0, 0, 0.31);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  .navbar__phones {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Aleo", serif; }
+  .navbar__links {
+    width: 15rem;
+    margin-left: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .navbar__links-item:link, .navbar__links-item:visited {
+      text-decoration: none;
+      height: 3rem;
+      width: 4rem; }
+      .navbar__links-item:link img, .navbar__links-item:visited img {
+        height: 100%;
+        background-position: center; }
+
+.headers {
+  width: 100%;
+  padding: 4rem 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .headers__logo {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #FF9900;
+    text-transform: uppercase; }
+  .headers__sub {
+    width: 50%;
+    font-size: 1.8rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .headers__sub-item:link, .headers__sub-item:visited {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 400;
+      letter-spacing: 0.07rem; }
+    .headers__sub-item--primary {
+      color: #FF9900 !important;
+      border-bottom: 3px solid #FF9900; }
+
+.jumbotron {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56.3%);
+  width: 50%; }
+  .jumbotron__paragraph {
+    font-size: 1.8rem;
+    font-family: "Aleo", serif;
+    margin-top: 2.9rem;
+    margin-bottom: 7.1rem; }
+
+.down-row {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 16.9rem;
+  padding: 3rem 8rem;
+  background-color: transparent;
+  backdrop-filter: blur(9px);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(20rem, 1fr));
+  align-content: center;
+  grid-gap: 8rem; }
+  .down-row__card {
+    font-family: "Aleo", serif;
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative; }
+  .down-row__icon {
+    position: absolute;
+    top: 0;
+    right: 0; }
+
+.stages {
+  font-size: 1.6rem;
+  background-color: #000;
+  width: 100%;
+  height: 53.1rem;
+  padding: 6.5rem 16.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.chain {
+  width: 100%;
+  font-family: "Aleo", serif;
+  margin-top: 9.3rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); }
+  .chain__card {
+    display: flex;
+    flex-direction: column; }
+  .chain__icon {
+    font-size: 4rem;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    margin-bottom: 3rem; }
+    .chain__icon::before, .chain__icon::after {
+      height: 1px;
+      background-color: currentColor;
+      display: block;
+      content: ""; }
+    .chain__icon-item {
+      width: 7rem;
+      height: 7rem;
+      border: 1px solid #fff;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      border-radius: 100px;
+      position: relative; }
+      .chain__icon-item::after {
+        position: absolute;
+        height: 7rem;
+        width: 7rem;
+        border: 3px solid #FF9900;
+        border-radius: 100px;
+        display: block;
+        content: ""; }
+      .chain__icon-item--1::after {
+        clip-path: polygon(44% 0, 100% 0, 100% 33%, 82% 17%); }
+      .chain__icon-item--2::after {
+        clip-path: polygon(44% 0, 100% 0, 100% 70%, 82% 17%); }
+      .chain__icon-item--3::after {
+        clip-path: polygon(54% 0, 100% 0%, 100% 100%, 54% 100%); }
+      .chain__icon-item--4::after {
+        clip-path: polygon(50% 0%, 100% 0, 100% 99%, 0 100%, 0 76%); }
+      .chain__icon-item--5::after {
+        clip-path: polygon(50% 0%, 100% 0, 100% 99%, 0 100%, 0 42%); }
+    .chain__icon--first::before {
+      height: 0; }
+    .chain__icon--last::after {
+      height: 0; }
+  .chain__paragraph {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0 2rem;
+    align-self: center; }

@@ -1,0 +1,35 @@
+// Fonts
+$font-primary: "Playfair Display", serif;
+$font-secondary: "Aleo", serif;
+// Colors
+$color-yellow: #FF9900;
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+  color: #fff;
+}
+
+::selection {
+  color: #fff;
+  background: $color-yellow;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}

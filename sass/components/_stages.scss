@@ -1,0 +1,96 @@
+.stages {
+  font-size: 1.6rem;
+  background-color: #000;
+  width: 100%;
+  height: 53.1rem;
+  padding: 6.5rem 16.7rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.chain {
+  width: 100%;
+  font-family: $font-secondary;
+  margin-top: 9.3rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__icon {
+    font-size: 4rem;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    &::before,
+    &::after {
+      height: 1px;
+      background-color: currentColor;
+      display: block;
+      content: "";
+    }
+
+    &-item {
+      width: 7rem;
+      height: 7rem;
+      border: 1px solid #fff;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      border-radius: 100px;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        height: 7rem;
+        width: 7rem;
+        border: 3px solid $color-yellow;
+        border-radius: 100px;
+        display: block;
+        content: "";
+      }
+      &--1::after {
+        clip-path: polygon(44% 0, 100% 0, 100% 33%, 82% 17%);
+      }
+      &--2::after {
+        clip-path: polygon(44% 0, 100% 0, 100% 70%, 82% 17%);
+      }
+      &--3::after {
+        clip-path: polygon(54% 0, 100% 0%, 100% 100%, 54% 100%);
+      }
+      &--4::after {
+        clip-path: polygon(50% 0%, 100% 0, 100% 99%, 0 100%, 0 76%);
+      }
+      &--5::after {
+        clip-path: polygon(50% 0%, 100% 0, 100% 99%, 0 100%, 0 42%);
+      }
+    }
+
+    &--first {
+      &::before {
+        height: 0;
+      }
+    }
+
+    &--last {
+      &::after {
+        height: 0;
+      }
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.4rem;
+    color: rgba(#fff, 0.8);
+    padding: 0 2rem;
+    align-self: center;
+  }
+}

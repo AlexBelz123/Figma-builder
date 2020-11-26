@@ -1,0 +1,131 @@
+.landing {
+  width: 100%;
+  height: 100.14rem;
+  // height: 100vh;
+  font-size: 1.6rem;
+  background-image: url("../img/electric-man.png");
+  background-size: cover;
+
+  position: relative;
+}
+
+// Bavbar
+.navbar {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 11rem;
+  background-color: rgba(#000, 0.31);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__phones {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-secondary;
+  }
+
+  &__links {
+    width: 15rem;
+    margin-left: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-item:link,
+    &-item:visited {
+      text-decoration: none;
+      height: 3rem;
+      width: 4rem;
+      & img {
+        height: 100%;
+        background-position: center;
+      }
+    }
+  }
+}
+
+// Headers
+.headers {
+  width: 100%;
+  padding: 4rem 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: $color-yellow;
+    text-transform: uppercase;
+  }
+  // Headers list
+  &__sub {
+    width: 50%;
+    font-size: 1.8rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-item:link,
+    &-item:visited {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 400;
+      letter-spacing: 0.07rem;
+    }
+    &-item--primary {
+      color: $color-yellow !important;
+      border-bottom: 3px solid $color-yellow;
+    }
+  }
+}
+
+// Jumbotron
+.jumbotron {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56.3%);
+  width: 50%;
+
+  &__paragraph {
+    font-size: 1.8rem;
+    font-family: $font-secondary;
+    margin-top: 2.9rem;
+    margin-bottom: 7.1rem;
+  }
+
+}
+
+// Landing down row of options
+.down-row {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 16.9rem;
+  padding: 3rem 8rem;
+  background-color: transparent;
+  backdrop-filter: blur(9px);
+
+  display: grid;
+  grid-template-columns: repeat(5, minmax(20rem, 1fr));
+  align-content: center;
+  grid-gap: 8rem;
+
+  &__card {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
