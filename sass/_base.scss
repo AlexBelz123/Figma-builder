@@ -2,7 +2,24 @@
 $font-primary: "Playfair Display", serif;
 $font-secondary: "Aleo", serif;
 // Colors
-$color-yellow: #FF9900;
+$color-yellow: #ff9900;
+$color-yellow-light: #ffb800;
+$white-transparent: rgba(#fff, 0.7);
+
+//MEDIAS
+
+$big-screen: 87.5em; //1400px
+$tab-land-big: 81.25em; // 1300px
+$tab-land-medium: 68.75em; //1100px
+$tab-land-small: 63.8125em; //1021px
+$tab-land-extra-small: 61.3125em; //981px
+$tab-port-big: 56.25em; //900px
+$tab-port-medium: 45.3125em; //725px
+$tab-port-small: 38.75em; //620px
+$mobile-big: 37.5em; //600px
+$mobile-medium: 29.875em; //478px
+$mobile-medium-small: 26.625em; //426px
+$mobile-small: 23.9375em; //383pxpx
 
 
 *,
@@ -16,6 +33,15 @@ $color-yellow: #FF9900;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  // Media
+  @include respond($tab-land-big) {
+    font-size: 55%;
+  }
+
+  @include respond($tab-port-big) {
+    font-size: 50%;
+  }
 }
 
 body {

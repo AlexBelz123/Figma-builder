@@ -1,0 +1,89 @@
+.contact {
+  width: 100%;
+  height: 38.5rem;
+  font-size: 1.6rem;
+  background-color: $color-yellow-light;
+  position: relative;
+
+  &__paragraph {
+    font-size: 1.8rem;
+    color: $white-transparent;
+  }
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 50%;
+  height: 100%;
+  padding: 4rem;
+
+  // Media
+  @include respond($big-screen) {
+    width: 65%;
+  }
+  @include respond($tab-land-medium) {
+    width: 80%;
+  }
+  @include respond($tab-port-medium) {
+    width: 95%;
+  }
+
+  &__headers {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+// Form
+.form {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  // Block of two inputs
+  &__group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // Input field
+  &__input,
+  &__message {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 30rem;
+    height: 3rem;
+    font-size: 1.8rem;
+    color: #fff;
+    border-bottom: 1px solid $white-transparent;
+
+    // Media
+    @include respond($mobile-big) {
+      width: 40%;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $white-transparent;
+    }
+  }
+
+  &__message {
+    width: 100%;
+  }
+}

@@ -8,6 +8,25 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  // Media
+  @include respond($tab-land-big) {
+    padding: 4.5rem 9rem;
+  }
+
+  @include respond($tab-land-medium) {
+    padding: 3.5rem 5.5rem;
+  }
+
+  @include respond($tab-land-small) {
+    padding: 3.5rem 2rem;
+  }
+  @include respond($tab-port-big) {
+    align-items: center;
+  }
+  @include respond($mobile-medium) {
+    height: 57.1rem;
+  }
 }
 
 .chain {
@@ -16,6 +35,13 @@
   margin-top: 9.3rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+
+  @include respond($tab-port-medium) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 4rem;
+    margin-top: 6.3rem;
+  }
 
   &__card {
     display: flex;
@@ -35,6 +61,17 @@
       background-color: currentColor;
       display: block;
       content: "";
+
+      @include respond($tab-port-medium) {
+       display: none;
+      }
+    }
+
+    // Media
+    @include respond($tab-port-medium) {
+      font-size: 2.85rem;
+      grid-template-columns: 1fr;
+      justify-items: center;
     }
 
     &-item {
@@ -48,14 +85,26 @@
 
       position: relative;
 
+      // Media
+      @include respond($tab-port-medium) {
+        width: 5rem;
+        height: 5rem;
+      }
+
       &::after {
         position: absolute;
         height: 7rem;
         width: 7rem;
-        border: 3px solid $color-yellow;
+        border: 3px solid $color-yellow-light;
         border-radius: 100px;
         display: block;
         content: "";
+
+        // Media
+        @include respond($tab-port-medium) {
+          width: 5rem;
+          height: 5rem;
+        }
       }
       &--1::after {
         clip-path: polygon(44% 0, 100% 0, 100% 33%, 82% 17%);
@@ -77,12 +126,14 @@
     &--first {
       &::before {
         height: 0;
+        width: 0;
       }
     }
 
     &--last {
       &::after {
         height: 0;
+        width: 0;
       }
     }
   }

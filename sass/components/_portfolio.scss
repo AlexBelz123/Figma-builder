@@ -1,0 +1,165 @@
+.portfolio {
+  width: 100%;
+  height: 83.8rem;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+
+  @include respond($mobile-medium) {
+    height: auto;
+  }
+
+  // Main headers
+  &__headers {
+    width: 100%;
+    height: 20.68rem;
+    text-align: center;
+    padding-top: 7.6rem;
+    padding-bottom: 3.8rem;
+
+    @include respond($mobile-medium) {
+      padding-bottom: 0;
+      margin-bottom: -5rem;
+    }
+  }
+
+  // Under headers block
+  &__blocks {
+    width: 100%;
+    height: calc(100% - 20.68rem);
+    flex: 1;
+    display: flex;
+
+    @include respond($mobile-medium) {
+      flex-direction: column;
+    }
+  }
+
+  // Portfolio info
+  &__info {
+    width: 60%;
+    height: 100%;
+    padding: 8.8rem 16.7rem;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    position: relative;
+
+    // Header
+    &-header {
+      font-weight: 700;
+    }
+
+    // Items
+    &-items {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      &:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-paragraph,
+    &-item {
+      font-size: 1.8rem;
+    }
+    &-item span {
+      font-weight: 700;
+      margin-right: 1rem;
+    }
+
+    // Media
+    @include respond($tab-land-medium) {
+      padding: 4.4rem 8.8rem;
+    }
+
+    @include respond($tab-port-big) {
+      padding: 3.4rem 4rem;
+      width: 50%;
+    }
+
+    @include respond($mobile-medium) {
+      width: 100%;
+      height: 51rem;
+    }
+  }
+
+  // Portfolio Slider Block
+  &__gallery {
+    width: 40%;
+    height: 100%;
+    display: flex;
+
+    @include respond($tab-port-big) {
+      width: 50%;
+    }
+    @include respond($tab-port-medium) {
+      flex-direction: column;
+      align-items: flex-start;
+      height: calc(100% - 12.5rem);
+    }
+    @include respond($tab-port-small) {
+      height: auto;
+    }
+
+    @include respond($mobile-medium) {
+      width: 100%;
+    }
+  }
+
+  &__images {
+    list-style: none;
+    width: 12rem;
+    height: 100%;
+    padding: 0 0.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+
+    // Media
+    @include respond($tab-port-medium) {
+      width: 100%;
+      height: 12rem;
+      flex-direction: row;
+      margin-bottom: 0.5rem;
+    }
+
+    // li item
+    &-item {
+      width: 100%;
+      height: 12rem;
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+
+        @include respond($tab-port-medium) {
+          margin-right: 0.5rem;
+          margin-bottom: 0;
+        }
+      }
+
+      // Media
+      @include respond($tab-port-medium) {
+        width: 12rem;
+        height: 100%;
+        flex-direction: row;
+      }
+    }
+
+    // actual image
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // Portfolio slider
+  &__slider {
+    flex: 1;
+    height: 100%;
+  }
+}

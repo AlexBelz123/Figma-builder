@@ -1,0 +1,115 @@
+.footer {
+  width: 100%;
+  // height: 40.3rem;
+  font-size: 1.6rem;
+  background-color: #000;
+  padding: 16rem 16rem 0 16rem;
+
+  // Media
+  @include respond($tab-port-big) {
+    padding: 11.4rem 11.4rem 0 11.4rem;
+  }
+
+  @include respond($tab-port-medium) {
+    padding: 7.3rem 7.3rem 0 7.3rem;
+  }
+
+  @include respond($mobile-medium) {
+    padding: 3.9rem 3.9rem 0 3.9rem;
+  }
+
+  // Footer up row
+  &__up-row {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
+    grid-gap: 12rem;
+    padding-bottom: 14.5rem;
+
+    // Media
+    @include respond($tab-land-medium) {
+      grid-gap: 6rem;
+      padding-bottom: 10.5rem;
+    }
+    @include respond($mobile-medium) {
+      grid-gap: 3.8rem;
+      padding-bottom: 7.5rem;
+    }
+    @include respond($mobile-small) {
+      grid-gap: 2rem;
+      padding-bottom: 4.5rem;
+    }
+  }
+
+  // Description
+  &__description {
+    &-text {
+      margin-top: 2rem;
+      color: $white-transparent;
+
+      // Media
+      @include respond($mobile-medium-small) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  // Options
+  &__options {
+    list-style: none;
+    color: $white-transparent;
+  }
+
+  // Location + phone number
+  &__location,
+  &__options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    color: $white-transparent;
+
+    // Media
+    @include respond($mobile-medium-small) {
+      font-size: 1.2rem;
+    }
+
+    &-loc {
+      & span {
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+  }
+  // Footer Links
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  &__links-item:link,
+  &__links-item:visited {
+    width: 2.5rem;
+    height: 2.5rem;
+    text-decoration: none;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__down-row {
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+  }
+
+  // Copyright
+  &__copyright {
+    font-size: 1.4rem;
+    color: rgba(#fff, 0.4);
+  }
+}

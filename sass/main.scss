@@ -1,6 +1,11 @@
+@import "mixins";
 @import "base";
 @import "abstracts";
 // Components
 @import "components/about-us";
+@import "components/contact-form";
 @import "components/landing";
+@import "components/portfolio";
+@import "components/reviews";
 @import "components/stages";
+@import "components/footer";
