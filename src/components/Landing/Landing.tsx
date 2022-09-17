@@ -34,27 +34,6 @@ const Landing = () => {
       {/* <!--  Headers--> */}
       <div className="headers">
         <div className="headers__logo">logo</div>
-        <ul className="headers__sub">
-          <a href="/" className="headers__sub-item">
-            {' '}
-            About us{' '}
-          </a>
-          <a href="/" className="headers__sub-item">
-            {' '}
-            Reviews{' '}
-          </a>
-          <a href="/" className="headers__sub-item">
-            {' '}
-            Prices{' '}
-          </a>
-          <a href="/" className="headers__sub-item headers__sub-item--primary">
-            Our works
-          </a>
-          <a href="/" className="headers__sub-item">
-            {' '}
-            Contacts{' '}
-          </a>
-        </ul>
         <a href="#contact-form" className="button-primary">
           {' '}
           Order a call{' '}
